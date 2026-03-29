@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-[#050511] text-gray-100 font-sans overflow-x-hidden m-0 p-0;
+  background: linear-gradient(135deg, #050511 0%, #0f0f23 100%);
+  color-scheme: dark;
+}
+
+#root {
+  @apply w-full min-h-screen;
+}
+
+.glass-panel {
+  @apply border rounded-lg backdrop-blur-md bg-gray-900/40 border-gray-700/50;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900/20;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-gray-700/50 hover:bg-gray-600/70;
+}
+
+.globe-container {
+  @apply absolute inset-0 z-0 w-full h-full;
+}
+
+.panel-overlay {
+  @apply absolute z-10 pointer-events-auto;
+}
+
+.threat-item {
+  @apply p-3 mb-2 transition-all duration-300 cursor-pointer;
+  @apply border rounded-lg backdrop-blur-md bg-gray-900/40 border-gray-700/50;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.threat-item:hover {
+  @apply bg-gray-900/60;
+  border-color: rgba(255, 0, 85, 0.3);
+  box-shadow: 0 0 20px rgba(255, 0, 85, 0.4), inset 0 0 10px rgba(255, 0, 85, 0.1);
+}
+
+.progress-bar {
+  @apply w-full h-2 overflow-hidden border rounded-full bg-gray-800/50 border-gray-700/50;
+}
+
+.progress-bar-fill {
+  @apply h-full transition-all duration-500 rounded-full bg-gradient-to-r from-red-600 to-red-500;
+  box-shadow: 0 0 10px rgba(255, 0, 85, 0.6);
+}
